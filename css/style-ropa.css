@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2vw;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.producto {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 220px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.producto:hover img {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+
+.producto-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.producto:hover .producto-info {
+    opacity: 1;
+    transform: translateY(0);
+    animation: mostrarMenu 0.3s ease forwards;
+}
+
+.producto-info button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.producto-info button:hover {
+    background-color: #0056b3;
+}
+
+.producto-info p {
+    margin: 0;
+    font-size: 16px;
+}
